@@ -1,12 +1,20 @@
 .navigation {
   background-color: aquamarine;
-  height: 8rem;
   border-top: 1px solid #aaa;
 
-  &-wrapper {
-    background-color: violet;
-    height: 8rem;
+  &__menu {
+    background-color: green;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 8rem;
+  }
+
+  &__menu:first-child {
+    
+  }
+
+  &__menu a {
+
   }
 }
