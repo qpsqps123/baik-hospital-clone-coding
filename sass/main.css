@@ -393,12 +393,21 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-.header-wrapper,
-.navigation__menu {
-  width: 130rem;
-  margin: 0 auto;
+/* layout */
+@media screen and (min-width: 81.25rem) {
+  .header-wrapper,
+  .navigation-wrapper {
+    width: 81.25rem;
+    margin: 0 auto;
+  }
 }
-
+@media screen and (min-width: 62.5rem) {
+  .header-wrapper,
+  .navigation-wrapper {
+    width: auto;
+    margin: 0 auto;
+  }
+}
 .header-wrapper {
   padding: 2.5rem 0;
   position: relative;
@@ -459,6 +468,15 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   height: 8rem;
+  width: 81.25rem;
+}
+.navigation__menu li {
+  background-color: orange;
+}
+.navigation__menu a {
+  background-color: goldenrod;
+  display: block;
+  margin: 50% 0;
 }
 
 /*# sourceMappingURL=main.css.map */

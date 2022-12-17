@@ -1,5 +1,18 @@
-.header-wrapper,
-.navigation__menu {
-  width: 130rem;
-  margin: 0 auto;
+@use '../utils/variable' as *;
+
+@media screen and (min-width: $layout-primary) {
+  .header-wrapper,
+  .navigation-wrapper {
+    width: $layout-primary;
+    margin: 0 auto;
+  }
 }
+
+@media screen and (min-width: 62.5rem) {
+  .header-wrapper,
+  .navigation-wrapper {
+    width: auto;
+    margin: 0 auto;
+  }
+}
+

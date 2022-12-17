@@ -1,3 +1,5 @@
+@use '../utils/variable' as *;
+
 .navigation {
   background-color: aquamarine;
   border-top: 1px solid #aaa;
@@ -8,13 +10,20 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     height: 8rem;
+    width: $layout-primary;
   }
 
   &__menu:first-child {
     
   }
 
-  &__menu a {
+  &__menu li {
+    background-color: orange;
+  }
 
+  &__menu a {
+    background-color:goldenrod;
+    display: block;
+    margin: 50% 0;
   }
 }
