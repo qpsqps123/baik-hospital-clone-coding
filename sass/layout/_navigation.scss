@@ -1,29 +1,61 @@
 @use '../utils/variable' as *;
 
 .navigation {
-  background-color: aquamarine;
-  border-top: 1px solid #aaa;
+  border: 1px solid #aaa;
+  height: 8rem;
 
-  &__menu {
-    background-color: green;
+  /* navigation menu */
+  &-wrapper {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    height: 8rem;
-    width: $layout-primary;
+    align-items: center;
   }
 
-  &__menu:first-child {
-    
+  &__menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 
   &__menu li {
-    background-color: orange;
+    flex-grow: 1;
   }
 
   &__menu a {
-    background-color:goldenrod;
-    display: block;
-    margin: 50% 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    text-align: center;
+    outline-offset: -2px;
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+
+  &__menu a:hover {
+    border-top: 0.4rem solid rgb(70, 104, 189);
+    padding: 2.6rem 3rem 3rem 3rem;
+}
+
+  &__search {
+    background: url(/images/search-icon.png) no-repeat center center;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 8rem;
+    border-color: transparent;
+  }
+
+  /* navigation sub menu */
+  &__sub-menu {
+    background-color: aqua;
+    position: absolute;
+    border-color: transparent;
+  }
+
+  &__sub-menu a:hover {
+    border-color: transparent;
   }
 }

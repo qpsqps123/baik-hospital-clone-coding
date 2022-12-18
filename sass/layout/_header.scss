@@ -1,11 +1,11 @@
-.header-wrapper {
+.header {
   padding: 2.5rem 0;
   position: relative;
   height: 10rem;
 }
 
 @media screen and (max-width: 83.75rem) {
-  .header-wrapper {
+  .header {
     padding: 2.5rem 1rem;
     width: 100%;
   }

@@ -394,28 +394,33 @@ body {
 }
 
 /* layout */
+@media screen and (max-width: 62.5rem) {
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 62.51rem) and (max-width: 81.24rem) {
+  .header,
+  .navigation-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 81.25rem) {
-  .header-wrapper,
+  .header,
   .navigation-wrapper {
-    width: 81.25rem;
+    width: 130rem;
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 62.5rem) {
-  .header-wrapper,
-  .navigation-wrapper {
-    width: auto;
-    margin: 0 auto;
-  }
-}
-.header-wrapper {
+.header {
   padding: 2.5rem 0;
   position: relative;
   height: 10rem;
 }
 
 @media screen and (max-width: 83.75rem) {
-  .header-wrapper {
+  .header {
     padding: 2.5rem 1rem;
     width: 100%;
   }
@@ -459,24 +464,55 @@ body {
   }
 }
 .navigation {
-  background-color: aquamarine;
-  border-top: 1px solid #aaa;
+  border: 1px solid #aaa;
+  height: 8rem;
+  /* navigation menu */
+  /* navigation sub menu */
 }
-.navigation__menu {
-  background-color: green;
+.navigation-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  height: 8rem;
-  width: 81.25rem;
+  align-items: center;
+}
+.navigation__menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 .navigation__menu li {
-  background-color: orange;
+  flex-grow: 1;
 }
 .navigation__menu a {
-  background-color: goldenrod;
-  display: block;
-  margin: 50% 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  text-align: center;
+  outline-offset: -2px;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+.navigation__menu a:hover {
+  border-top: 0.4rem solid rgb(70, 104, 189);
+  padding: 2.6rem 3rem 3rem 3rem;
+}
+.navigation__search {
+  background: url(/images/search-icon.png) no-repeat center center;
+  width: 5rem;
+  height: 5rem;
+  margin-left: 8rem;
+  border-color: transparent;
+}
+.navigation__sub-menu {
+  background-color: aqua;
+  position: absolute;
+  border-color: transparent;
+}
+.navigation__sub-menu a:hover {
+  border-color: transparent;
 }
 
 /*# sourceMappingURL=main.css.map */

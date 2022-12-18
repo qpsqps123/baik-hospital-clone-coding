@@ -1,18 +1,25 @@
 @use '../utils/variable' as *;
 
-@media screen and (min-width: $layout-primary) {
-  .header-wrapper,
+@media screen and (max-width: 62.5rem) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 62.51rem) and (max-width: 81.24rem) {
+  .header,
   .navigation-wrapper {
-    width: $layout-primary;
+    width: 100%;
     margin: 0 auto;
   }
 }
 
-@media screen and (min-width: 62.5rem) {
-  .header-wrapper,
+@media screen and (min-width: 81.25rem) {
+  .header,
   .navigation-wrapper {
-    width: auto;
+    width: 130rem;
     margin: 0 auto;
   }
 }
+
 
