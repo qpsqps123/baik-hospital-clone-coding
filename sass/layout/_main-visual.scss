@@ -1,0 +1,13 @@
+.main {
+  background-color: pink;
+}
+
+.main-visual {
+  background-color: yellow;
+
+  &__image {
+    width: 100%;
+    height: 53.5rem;
+    background: url(/images/visual-background.gif) no-repeat center/cover;
+  }
+}
