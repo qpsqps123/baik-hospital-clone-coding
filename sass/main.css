@@ -407,7 +407,8 @@ body {
   .header,
   .navigation__menu-wrapper,
   .navigation__sub-menu-wrapper,
-  .main-visual__menu {
+  .main-visual__menu,
+  .main-vusual__sub-menu {
     width: 100%;
     margin: 0 auto;
   }
@@ -416,7 +417,8 @@ body {
   .header,
   .navigation__menu-wrapper,
   .navigation__sub-menu-wrapper,
-  .main-visual__menu {
+  .main-visual__menu,
+  .main-visual__sub-menu {
     width: 130rem;
     margin: 0 auto;
   }
@@ -530,6 +532,7 @@ body {
   border-color: transparent;
 }
 .navigation__sub-menu {
+  display: none;
   padding: 2rem;
   background-color: #fff;
   border-top: 1px solid #aaa;
@@ -600,6 +603,20 @@ body {
 .main-visual__menu-list {
   display: block;
   width: 100%;
+  height: 100%;
+}
+.main-visual__sub-menu-wrapper {
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-visual__sub-menu {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 130rem;
   height: 100%;
 }
 

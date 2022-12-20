@@ -67,4 +67,20 @@
     width: 100%;
     height: 100%;
   }
+
+  &__sub-menu-wrapper {
+    background-color: yellow;
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__sub-menu {
+    background-color: pink;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 130rem;
+    height: 100%;
+  }
 }
