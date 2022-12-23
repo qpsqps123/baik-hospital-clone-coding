@@ -1,4 +1,5 @@
 @use '../utils/variable' as *;
+@use '../utils/function' as *;
 
 @media screen and (max-width: 62.5rem) {
   .navigation {
@@ -7,7 +8,6 @@
 }
 
 @media screen and (min-width: 62.5rem) and (max-width: 81.25rem) {
-  .header,
   .navigation__menu-wrapper,
   .navigation__sub-menu-wrapper,
   .main-visual__menu,
@@ -18,7 +18,6 @@
 }
 
 @media screen and (min-width: 81.25rem) {
-  .header,
   .navigation__menu-wrapper,
   .navigation__sub-menu-wrapper,
   .main-visual__menu,

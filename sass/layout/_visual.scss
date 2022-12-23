@@ -1,4 +1,5 @@
 @use '../utils/variable' as *;
+@use '../utils/function' as *;
 
 .main-visual {
   position: relative;
@@ -82,5 +83,10 @@
     flex-flow: row nowrap;
     width: 130rem;
     height: 100%;
+  }
+
+  &__sub-menu-more::before {
+    width: 18px;
+    height: 6px;
   }
 }

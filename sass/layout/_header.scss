@@ -1,14 +1,10 @@
-.header {
-  padding: 2.5rem 0;
-  position: relative;
-  height: 10rem;
-}
+@use '../utils/mixin' as *;
+@use '../utils/function' as *;
 
-@media screen and (max-width: 83.75rem) {
-  .header {
-    padding: 2.5rem 1rem;
-    width: 100%;
-  }
+.header {
+  padding: rem(25px) 0;
+  position: relative;
+  height: rem(100px);
 }
 
 .header__logo {
@@ -19,26 +15,26 @@
 
 .header__language {
   position: absolute;
-  top: 2.5rem;
+  top: rem(25px);
   right: 0;
-  font-size: 1.5rem;
+  font-size: rem(15px);
   font-weight: 600;
-  letter-spacing: -0.05rem;
+  letter-spacing: rem(-1px);
   text-transform: capitalize;
-  padding: 1.5rem;
+  padding: rem(15px);
   white-space: nowrap;
 
   i {
-    text-indent: 0.5rem;
+    text-indent: rem(5px);
   }
 
   &-contents {
     display: none;
     background-color: #fff;
-    border: 0.1rem solid #aaa;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-top: 0.5rem;
+    border: rem(1px) solid #aaa;
+    border-radius: rem(5px);
+    padding: rem(10px);
+    margin-top: rem(5px);
     text-align: center;
   }
 
@@ -47,11 +43,25 @@
   }
 }
 
-@media screen and (max-width: 83.75rem) {
-  .header__language {
-    right: 1rem;
+@include desktop {
+  .header {
+    padding: rem(25px) 0;
+    width: rem(1300px);
+    margin: 0 auto;
   }
 }
+
+@include tablet-lg {
+  .header {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header__language {
+    right: rem(10px);
+  }
+}
+
 
 
 

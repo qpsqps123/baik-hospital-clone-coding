@@ -1,9 +1,10 @@
 @use '../utils/variable' as *;
+@use '../utils/function' as *;
 
 .navigation {
-  height: 7rem;
+  height: rem(70px);
   border: 1px solid $gray;
-
+  
   /* navigation menu */
 
   &__menu-wrapper {
