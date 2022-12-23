@@ -1,13 +1,14 @@
-@use '../utils/variable' as *;
-@use '../utils/function' as *;
+@use "../utils/variable" as *;
+@use "../utils/function" as *;
+@use "../utils/mixin" as *;
 
 .main-visual {
   position: relative;
-  z-index: -1;
+  z-index: $level-under-1;
 
   &__image {
     width: 100%;
-    height: 53.5rem;
+    height: rem(535px);
     background: url(/images/visual-background.gif) no-repeat center/cover;
   }
 
@@ -23,66 +24,94 @@
   }
 
   &__text-sub {
-    font-size: 2.21rem;
+    font-size: $font-size-22;
   }
 
   &__text-main {
-    font-size: 5.1rem;
-    font-weight: 600;
+    font-size: $font-size-51;
+    font-weight: $font-weight-600;
     line-height: 1.3;
   }
 
   &__menu-wrapper {
-    background-color: rgba(70,72,77,.85);
+    background-color: rgba(70, 72, 77, 0.85);
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 7rem;
+    height: $tab-height;
   }
 
   &__menu {
+    @include desktop {
+      width: $main-layout;
+      margin: 0 auto;
+    }
+    @include tablet-lg {
+      width: 100%;
+      margin: 0 auto;
+    }
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    max-width: 130rem;
+    max-width: $main-layout;
     height: 100%;
   }
 
   &__menu-tab {
     text-align: center;
-    line-height: 7rem;
+    line-height: $tab-height;
     width: 100%;
     height: 100%;
     border-right: 1px solid $dark-gray;
     color: $white;
-    font-size: $secondary-font-size;
-    font-weight: $secondary-font-weight;
+    font-size: $font-size-19;
+    font-weight: $font-weight-600;
   }
 
   &__menu-tab:first-child {
     border-left: 1px solid $dark-gray;
   }
 
-  &__menu-list {  
+  &__menu-list {
     display: block;
     width: 100%;
     height: 100%;
   }
 
   &__sub-menu-wrapper {
-    background-color: yellow;
-    position: absolute; 
+    // background-color: yellow;
+    position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
   }
 
   &__sub-menu {
-    background-color: pink;
+    @include desktop {
+      width: $main-layout;
+      margin: 0 auto;
+    }
+    @include tablet-lg {
+      width: 100%;
+      margin: 0 auto;
+    }
+    @include tablet-sm {
+      width: 100%;
+      margin: 0 auto;
+
+      & img {
+        width: 100%;
+      }
+    }
+    // background-color: pink;
     display: flex;
     flex-flow: row nowrap;
-    width: 130rem;
+    width: $main-layout;
     height: 100%;
+
+    & img {
+      width: 100%;
+    }
   }
 
   &__sub-menu-more::before {

@@ -1,17 +1,33 @@
+@use '../utils/function' as *;
+
 /* layout */
-// $layout-desktop: 81.25rem;
-// $layout-tablet: 62.5rem;
+$main-layout: rem(1300px);
+
+/* height */
+$tab-height: rem(70px);
+
+/* z-index */
+$level-1: 1;
+$level-under-1: -1;
 
 /* spacing */
+$spacing-5: rem(5px);
+$spacing-10: rem(10px);
+$spacing-15: rem(15px);
+$spacing-20: rem(20px);
+$spacing-25: rem(25px);
 
 /* font size */
-$secondary-font-size: 1.9rem;
+$font-size-15: rem(15px);
+$font-size-19: rem(19px);
+$font-size-22: rem(22px);
+$font-size-51: rem(51px);
 
 /* font weight */
-$secondary-font-weight: 600;
+$font-weight-600: 600;
 
 /* color */
-$primary-color: #2a629d;
+$symbol-color-primary: #2a629d;
 
 $white: #fff;
 $gray: #aaa;
