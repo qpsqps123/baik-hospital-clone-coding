@@ -9,7 +9,7 @@
 
   &__image {
     width: 100%;
-    height: rem(535px);
+    height: rem(580px);
     background: url(/images/visual-background.gif) no-repeat center/cover;
   }
 
@@ -109,13 +109,15 @@
     }
 
     img {
+      display: inline-block;
       max-width: 100%;
       height: auto;
-      display: inline-block;
+      margin-top: $spacing-25;
     }
 
     &-text {
       margin-top: $spacing-25;
+      line-height: 1.5;
     }
 
     &-text-main {
@@ -140,7 +142,7 @@
       height: rem(50px);
       border: 3px solid $gray;
       border-radius: 100%;
-      margin-top: $spacing-25;
+      margin-top: $spacing-20;
     }
 
     &-more::before,
