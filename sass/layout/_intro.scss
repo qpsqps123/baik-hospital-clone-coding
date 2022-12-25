@@ -1,0 +1,16 @@
+@use '../utils/variable' as *;
+@use '../utils/mixin' as *;
+@use '../utils/function' as *;
+
+.main-intro {
+  position: relative;
+
+  &__card {
+    margin: 0 auto;
+    background-color: yellow;
+
+    @include desktop {
+      width: $main-layout;
+    }
+  }
+}

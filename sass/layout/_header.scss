@@ -3,17 +3,17 @@
 @use '../utils/function' as *;
 
 .header {
-  @include desktop {
-    width: $main-layout;
-    margin: 0 auto;
-  }
-  @include tablet-lg {
-      width: 100%;
-      margin: 0 auto;
-  }
-  padding: $spacing-25 0;
   position: relative;
   height: rem(100px);
+  margin: 0 auto;
+  padding: $spacing-25 0;
+
+  @include desktop {
+    width: $main-layout;
+  }
+  @include tablet-lg {
+    width: 100%;
+  }
 }
 
 .header__logo {
@@ -23,9 +23,6 @@
 }
 
 .header__language {
-  @include tablet-lg {
-    right: $spacing-10;
-  }
   position: absolute;
   top: $spacing-25;
   right: 0;
@@ -35,6 +32,10 @@
   text-transform: capitalize;
   padding: $spacing-15;
   white-space: nowrap;
+
+  @include tablet-lg {
+    right: $spacing-10;
+  }
 
   i {
     text-indent: $spacing-5;
