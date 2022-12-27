@@ -1,0 +1,12 @@
+@use '../utils/variable' as *;
+@use '../utils/mixin' as *;
+@use '../utils/function' as *;
+
+.main-history {
+  padding: $spacing-85 0;
+  background: url(/images/main/history/history-background-image.jpg) no-repeat center/cover;
+
+  &__title {
+    color: $white;
+  }
+}

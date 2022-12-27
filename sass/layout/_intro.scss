@@ -3,14 +3,89 @@
 @use '../utils/function' as *;
 
 .main-intro {
-  position: relative;
 
   &__card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin: 0 auto;
-    background-color: yellow;
+    padding: $spacing-85 0;
 
     @include desktop {
       width: $main-layout;
+    }
+
+    &-list {
+      position: relative;
+      width: 24%;
+      height: rem(389px);
+      border-radius: rem(20px);
+    }
+    &-list:nth-child(1) {
+      background: url(/images/main/intro/intro-card-image-1.jpg) no-repeat center/cover;
+    }
+    &-list:nth-child(2) {
+      background: url(/images/main/intro/intro-card-image-2.jpg) no-repeat center/cover;
+    }
+    &-list:nth-child(3) {
+      background: url(/images/main/intro/intro-card-image-3.jpg) no-repeat center/cover;
+    }
+    &-list:nth-child(4) {
+      background: url(/images/main/intro/intro-card-image-4.jpg) no-repeat center/cover;
+    }
+
+    &-content {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: $spacing-25;
+    }
+
+    & p {
+      line-height: 1.5;
+      color: $white;
+    }
+
+    &-text-main {
+      font-size: $font-size-22;
+      font-weight: $font-weight-600;
+    }
+
+    &-text-sub {
+      margin-top: $spacing-10;
+      font-size: $font-size-19;
+    }
+
+    &-more {
+      display: inline-block;
+      position: absolute;
+      bottom: $spacing-20;
+      right: $spacing-20;
+      width: rem(40px);
+      height: rem(40px);
+      border-radius: 100%;
+      border: 3px solid $gray;
+    }
+
+    &-more::before,
+    &-more::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid $gray;
+    }
+
+    &-more::before {
+      width: rem(20px);
+      height: rem(1px);
+    }
+    
+    &-more::after {
+      width: rem(1px);
+      height: rem(20px);
     }
   }
 }

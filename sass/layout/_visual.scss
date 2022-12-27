@@ -10,7 +10,7 @@
   &__image {
     width: 100%;
     height: rem(580px);
-    background: url(/images/visual-background.gif) no-repeat center/cover;
+    background: url(/images/main/visual/visual-background.gif) no-repeat center/cover;
   }
 
   &__text {
@@ -116,7 +116,7 @@
     }
 
     &-text {
-      margin-top: $spacing-25;
+      margin-top: $spacing-20;
       line-height: 1.5;
     }
 
