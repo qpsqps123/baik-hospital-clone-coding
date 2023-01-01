@@ -12,6 +12,7 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+    padding: 0 $spacing-10;
     margin: 0 auto;
 
 
@@ -26,7 +27,42 @@
 
   &__menu-list {
     width: 25%;
+    margin-bottom: $spacing-25;
     border-left: 1px solid $symbol-color-primary;
+
+    @include desktop {
+      &:nth-child(4),
+      &:nth-child(8) {
+        border-right: 1px solid $symbol-color-primary;
+      }
+    }
+
+    @include tablet-lg {
+      &:nth-child(4),
+      &:nth-child(8) {
+        border-right: 1px solid $symbol-color-primary;
+      }
+    }
+
+    @include tablet-sm {
+      width: 33.3%;
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        border-right: 1px solid $symbol-color-primary;
+      }
+    }
+
+    @include mobile {
+      width: 50%;
+
+      &:nth-child(2),
+      &:nth-child(4), 
+      &:nth-child(6), 
+      &:nth-child(8) {
+        border-right: 1px solid $symbol-color-primary;
+      }
+    }
   }
 
   &__menu-content {
@@ -41,7 +77,10 @@
     }
   }
 
-  &__title {
-    color: $symbol-color-primary;
+  &__menu-title {
+    display: block;
+    font-size: $font-size-17;
+    color: $symbol-color-tertiary;
+    padding-top: $spacing-15;
   }
 }
