@@ -1,0 +1,43 @@
+@use '../utils/variable' as *;
+@use '../utils/mixin' as *;
+@use '../utils/function' as *;
+
+.footer {
+  background-color: $charcoal-gray;
+
+  &__link {
+    border-bottom: 1px solid $dark-gray;
+
+    &-sns {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      width: $main-layout;
+      margin: 0 auto;
+      padding: $spacing-20 0;
+    }
+
+    &-sns-icon {
+      display:inline-block;
+      width: rem(30px);
+      height: rem(30px);
+      margin-right: $spacing-10;
+    }
+
+    &-sns-icon:nth-child(1) {
+      background: url(/images/footer/footer-sns-icon1.png) no-repeat;
+    }
+    &-sns-icon:nth-child(2) {
+      background: url(/images/footer/footer-sns-icon2.png) no-repeat;
+    }
+    &-sns-icon:nth-child(3) {
+      background: url(/images/footer/footer-sns-icon3.png) no-repeat;
+    }
+    &-sns-icon:nth-child(4) {
+      background: url(/images/footer/footer-sns-icon4.png) no-repeat;
+    }
+    &-sns-icon:nth-child(5) {
+      background: url(/images/footer/footer-sns-icon5.png) no-repeat;
+    }
+  }
+}
