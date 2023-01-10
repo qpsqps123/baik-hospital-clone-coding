@@ -6,16 +6,15 @@
   background-color: $charcoal-gray;
 
   &__link {
-    border-bottom: 1px solid $dark-gray;
+    // border-bottom: 1px solid $dark-gray;
     position: relative;
+    width: $main-layout;
     margin: 0 auto;
 
     &-sns {
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
-      width: $main-layout;
-      margin: 0 auto;
       padding: $spacing-20 0;
     }
 
@@ -43,16 +42,28 @@
     }
 
     &-site {
-      background-color: aqua;
       position: absolute;
       top: 0;
-      height: rem(30px);
+      right: 0;
+      margin-top: $spacing-10;
     }
 
     &-family-site {
-      background-color: orange;
-      position: absolute;
-      right: 0;
+      padding: $spacing-15 $spacing-20 $spacing-15 $spacing-40;
+      background-color: transparent;
+      border: 1px solid $dark-gray;
+      color: $white;
+      font-size: $font-size-17;
+      font-weight: $font-weight-600;
+    }
+
+    &-family-site::after {
+      content: "";
+      display: inline-block;
+      width: rem(21px);
+      height: rem(11px);
+      margin-left: $spacing-10;
+      background: url(/images/footer/footer-arrow-icon.png) no-repeat center/50%;
     }
   }
 }
