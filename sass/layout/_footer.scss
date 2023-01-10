@@ -7,6 +7,8 @@
 
   &__link {
     border-bottom: 1px solid $dark-gray;
+    position: relative;
+    margin: 0 auto;
 
     &-sns {
       display: flex;
@@ -38,6 +40,19 @@
     }
     &-sns-icon:nth-child(5) {
       background: url(/images/footer/footer-sns-icon5.png) no-repeat;
+    }
+
+    &-site {
+      background-color: aqua;
+      position: absolute;
+      top: 0;
+      height: rem(30px);
+    }
+
+    &-family-site {
+      background-color: orange;
+      position: absolute;
+      right: 0;
     }
   }
 }
