@@ -6,7 +6,6 @@
   background-color: $charcoal-gray;
 
   &__link {
-    // border-bottom: 1px solid $dark-gray;
     position: relative;
     width: $main-layout;
     margin: 0 auto;
@@ -49,6 +48,7 @@
     }
 
     &-family-site {
+      position: relative;
       padding: $spacing-15 $spacing-20 $spacing-15 $spacing-40;
       background-color: transparent;
       border: 1px solid $dark-gray;
@@ -66,15 +66,26 @@
       background: url(/images/footer/footer-arrow-icon.png) no-repeat center/50%;
     }
 
-    &-family-site-menu {
-      
+    &-site-menu {
+      position: absolute;
+      width: 100%;
+      height: rem(200px);
+      bottom: 100%;
+      background-color: $white;
+      border: 1px solid $strong-black;
+      overflow: scroll;
     }
 
-    &-family-site-list {
-
+    &-site-content {
+      display: block; // @todo 마우스 클릭시 display: none으로 on / off
+      padding: $spacing-10;
+      font-size: $font-size-17;
+      color: $light-black;
     }
 
-    &-family-site-content {
+    &-site-content:hover {
+      background-color: $charcoal-gray;
+      color: $white;
     }
   }
 }
