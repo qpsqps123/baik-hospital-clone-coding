@@ -9,4 +9,106 @@
   &__title {
     color: $white;
   }
+
+  &__card {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: hidden;
+
+    &-list {
+      margin: $spacing-10;
+      background: $white;
+      border-radius: rem(20px);
+      text-align: center;
+      line-height: 1.6;
+      white-space: nowrap;
+      letter-spacing: rem(-2px);
+    }
+
+    &-content {
+    }
+
+    &-img img {
+      width: rem(298px);
+      border-radius: rem(20px) rem(20px) 0 0;
+    }
+
+    &-title {
+      margin: $spacing-25;
+      font-size: $font-size-19;
+    }
+
+    &-title-main {
+      font-weight: $font-weight-600;
+    }
+
+    &-title-sub {
+      color: $dark-gray;
+    }
+  }
+
+  &__button-arrow{
+    text-align: center;
+    margin-top: $spacing-40;
+  }
+
+  &__button-arrow-prev,
+  &__button-arrow-next{
+    position: relative;
+    width: rem(60px);
+    height: rem(60px);
+    margin-right: $spacing-10;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    opacity: 0.8;
+  }
+
+  &__button-arrow-prev::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: rem(15px);
+    height: rem(3px);
+    top: 42%;
+    left: 45%;
+    transform: translate(-45%, -42%) rotate(-45deg);
+    background-color: $charcoal-gray;
+  }
+
+  &__button-arrow-prev::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: rem(15px);
+    height: rem(3px);
+    top: 58%;
+    left: 45%;
+    transform: translate(-45%, -58%) rotate(45deg);
+    background-color: $charcoal-gray;
+  }
+
+  &__button-arrow-next::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: rem(15px);
+    height: rem(3px);
+    top: 42%;
+    left: 55%;
+    transform: translate(-55%, -42%) rotate(45deg);
+    background-color: $charcoal-gray;
+  }
+
+  &__button-arrow-next::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: rem(15px);
+    height: rem(3px);
+    top: 58%;
+    left: 55%;
+    transform: translate(-55%, -58%) rotate(-45deg);
+    background-color: $charcoal-gray;
+  }
 }
